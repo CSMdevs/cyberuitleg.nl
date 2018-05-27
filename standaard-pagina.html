@@ -53,9 +53,10 @@
 									</video><br><br>
 									
 									<script type="text/javascript">
-										var vid = document.getElementById("video"); 
+										var vid = document.getElementById("video");
+										var time = vid.currentTime;
 										
-										if (vid.currentTime==10){
+										if (time==10){
 											vid.pause();
 										}
 										
