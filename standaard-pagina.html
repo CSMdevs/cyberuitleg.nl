@@ -53,19 +53,11 @@
 									</video><br><br>
 									
 									<script>
-										var video = document.getElementById("video").innerHTML;
+										var video = document.getElementById("video");
 										var time = video.currentTime;
 										
-										function playVid() { 
-											 video.play(); 
-										} 
-
-										function pauseVid() { 
-											 video.pause(); 
-										}
-										
 										if (time==10){
-											pauseVid();
+											video.pause();
 										}
 									</script>
 									
