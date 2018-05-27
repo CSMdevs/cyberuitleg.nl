@@ -58,7 +58,7 @@
 										var CurrentTime = video.currentTime;
 										
 										function isTime() {
-											if (CurrentTime==whenToPause){
+											if (CurrentTime>=whenToPause){
 												video.pause();
 											} else {
 												isTime();
