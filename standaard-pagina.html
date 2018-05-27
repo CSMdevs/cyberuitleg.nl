@@ -174,21 +174,7 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/scrolling.js"></script>
-			<script>
-			var whenToPause = 10;
-			var video = document.getElementById("intro-video");
-			var CurrentTime = video.currentTime;
-			
-			function isTime() {
-			if (CurrentTime>=whenToPause){
-				video.pause();
-				window.alert(CurrentTime+"Detected");
-			} else {
-				isTime();
-				window.alert(CurrentTime+"Not detected");
-				return;
-			}}
-			</script>
+			<script src="assets/js/pause-vid.js"></script>
 
 	</body>
 </html>
