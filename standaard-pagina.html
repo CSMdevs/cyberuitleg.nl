@@ -46,25 +46,13 @@
 									<p>Hier moet een goede inleiding staan over de les van deze pagina. Hieronder staat een video, als het kan komen er ook vragen tussen<strong>door</strong>. Verder kan je hieronder nog meer tekst neer zetten als je dat wilt, maar het is zeker aan te raden. Hierboven moet je een goede kwaliteit foto doen zodat je het er mooi uit ziet. Gebruik het liefst een foto van <a href="https://unsplash.com">Unsplash</a>. Als dat niet kan zorg dan er wel voor dat de foto copyright free is.</p>
 									
 									
-									<video id="video" controls poster="/images/pic01.jpg" style="margin-left: auto; margin-right: auto; display:block; width:70%">
+									<video id="intro-video" controls poster="images/pic01.jpg" style="margin-left: auto; margin-right: auto; display:block; width:70%">
 										<source src="video/demo/video_demo.webm" type="video/webm">
 										<source src="video/demo/video_demo.mp4" type="video/mp4">
 										<source src="video/demo/video_demo.ogv" type="video/ogg">
 									</video><br><br>
 									
-									<script>
-										var whenToPause = 10;
-										var video = document.getElementById("video");
-										var CurrentTime = video.currentTime;
-										
-										function isTime() {
-											if (CurrentTime>=whenToPause){
-												video.pause();
-											} else {
-												isTime();
-												return;
-											}}
-									</script>
+									
 									
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
 									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
@@ -186,6 +174,21 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/scrolling.js"></script>
+			<script>
+			var whenToPause = 10;
+			var video = document.getElementById("intro-video/demo/video_demo");
+			var CurrentTime = video.currentTime;
+			
+			function isTime() {
+			if (CurrentTime>=whenToPause){
+				video.pause();
+				window.alert(CurrentTime+"Detected");
+			} else {
+				isTime();
+				window.alert(CurrentTime+"Not detected");
+				return;
+			}}
+			</script>
 
 	</body>
 </html>
