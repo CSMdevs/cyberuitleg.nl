@@ -11,7 +11,8 @@ var pausing_function = function(){
         // remove the event listener after you paused the playback
         this.removeEventListener("timeupdate",pausing_function);
         question.style.display = 'inline';
-        video.remove();
+        video.style.display = 'none';
+        video.webkitExitFullScreen();
     }
 };
 
