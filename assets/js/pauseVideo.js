@@ -24,21 +24,21 @@ a2.textContent = ansTwo;
 a3.textContent = ansThree;
 a4.textContent = ansFour;
 
-a1.onclick = function () {  
+a1.onclick = function () { 
+    theClickedAns = ansOne; 
     setAnswer();
-    theClickedAns = a1;
 };
 a2.onclick = function () { 
-    setAnswer();
     theClickedAns = a2;
-};
-a3.onclick = function () {  
     setAnswer();
-    theClickedAns = a3;
+};
+a3.onclick = function () { 
+    theClickedAns = a3; 
+    setAnswer();
 };
 a4.onclick = function () {  
-    setAnswer();
     theClickedAns = a4;
+    setAnswer();
 };
 
 
@@ -57,24 +57,29 @@ var pausing_function = function(){
 
 function setAnswer() {
     theClickedAns.textContent = ansClicked;
-    alert("test");
+    alert(theClickedAns.textContent);
     checkAnswer();
+    return;
 }
 
 function checkAnswer() {
     if (ansClicked==ansCorrect) {
         ansIsCorrect();
+        return;
     } else {
         ansIsWrong();
+        return;
     }
 }
 
 function ansIsCorrect() {
     this.style.backgroundColor = "green";
+    return;
 }
 
 function ansIsWrong() {
     this.style.backgroundColor = "red";
+    return;
 }
 
 video.addEventListener("timeupdate", pausing_function);
