@@ -4071,3 +4071,15 @@
           -ms-user-select: none;
           user-select: none;
         }
+        
+        .profile {
+            max-width: 35px;
+            float : left;
+            margin-left: 10px;
+            margin-bottom: -5px;
+        }
+        
+        .profilepic {
+            border-radius: 50% !important;
+        }
+        
