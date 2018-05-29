@@ -57,7 +57,7 @@ var pausing_function = function(){
 
 function setAnswer() {
     theClickedAns.textContent = ansClicked;
-    alert("test";)
+    alert("test");
     checkAnswer();
 }
 
