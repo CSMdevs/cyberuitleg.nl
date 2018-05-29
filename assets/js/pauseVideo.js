@@ -25,20 +25,24 @@ a3.textContent = ansThree;
 a4.textContent = ansFour;
 
 a1.onclick = function () { 
-    theClickedAns = ansOne; 
+    theClickedAns = "one";
     setAnswer();
+    return;
 };
 a2.onclick = function () { 
-    theClickedAns = a2;
+    theClickedAns = "two";
     setAnswer();
+    return;
 };
 a3.onclick = function () { 
-    theClickedAns = a3; 
+    theClickedAns = "three"; 
     setAnswer();
+    return;
 };
 a4.onclick = function () {  
-    theClickedAns = a4;
+    theClickedAns = "four";
     setAnswer();
+    return;
 };
 
 
@@ -56,8 +60,7 @@ var pausing_function = function(){
 };
 
 function setAnswer() {
-    theClickedAns.textContent = ansClicked;
-    alert(theClickedAns.textContent);
+    alert(theClickedAns);
     checkAnswer();
     return;
 }
