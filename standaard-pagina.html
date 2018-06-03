@@ -54,8 +54,18 @@
 									<div id="questions">
 										<h2>This is the first question</h2>
 										<p><i>Here is some more explanation. I don't know why, but there's.</i></p>
-										<button id="answer-1" onclick="">Answer 1</button> <button id="answer-2" onclick="">Answer 2</button> <button id="answer-3" onclick="">Answer 3</button> <button id="answer-4" onclick="">Answer 4</button>
-										<br><br><br>
+										<div id="answer-buttons">
+											<button id="answer-1" onclick="">Answer 1</button> <button id="answer-2" onclick="">Answer 2</button> <button id="answer-3" onclick="">Answer 3</button> <button id="answer-4" onclick="">Answer 4</button>
+										</div>
+										<div id="correct">
+											<p>Je hebt het goede antwoord gekozen!</p>
+											<button id="verder-correct">Verder</button>
+										</div>
+										<div id="wrong">
+											<p>Je hebt het verkeerde antwoord gekozen, je moet weer terug naar het begin.....</p>
+											<button id="verder-wrong">Verder</button>
+										</div>
+										<br>
 									</div>
 									<br>
 									
@@ -107,72 +117,44 @@
 						<li>
 							<span class="opener">Encyptie</span>
 							<ul>
-								<li><a href="#">Deel 1</a></li>
-								<li><a href="#">Deel 2</a></li>
-								<li><a href="#">Deel 3</a></li>
-								<li><a href="#">Deel 4</a></li>
+								<li><a href="encryptie-introductie.html">Introductie</a></li>
+								<li><a href="encryptie-maken.html">Zelf maken</a></li>
+								<li><a href="encryptie-controleren.html">Controleren</a></li>
+								<li><a href="encryptie-toets.html">Toets</a></li>
 							</ul>
 						</li>
 						<li>
 							<span class="opener">Poorten</span>
 							<ul>
-								<li><a href="#">Deel 1</a></li>
-								<li><a href="#">Deel 2</a></li>
-								<li><a href="#">Deel 3</a></li>
-								<li><a href="#">Deel 4</a></li>
+								<li><a href="poorten-introductie.html">Introductie</a></li>
+								<li><a href="poorten-instellen.html">Instellen</a></li>
+								<li><a href="poorten-hacker.html">Verkeerd ingesteld</a></li>
+								<li><a href="poorten-quiz.html">Quiz</a></li>
 							</ul>
 						</li>
 						<li><a href="over.html">Over Ons</a></li>
 					</ul>
 				</nav>
-
-				<!-- Section -->
-				<!--<section>
-					<header class="major">
-						<h2>Video's</h2>
-					</header>
-					-->
-				<article>
+					<div class="mini-posts">
+						<article>
 							<header class="major">
 								<h2>Onze school</h2>
 							</header>
 							<a href="http://hvc.nl" class="image"><img src="images/hvc.jpg" alt="Het Herbert Vissers College" /></a>
 							<p>Dit project is in opdracht gemaakt voor het <a href="http://hvc.nl">Herbert Vissers College.</a> Dit project wordt ook getest op 1 vwo leerlingen van deze school.</p>
 						</article>
-					<!--
-						<article>
-							<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-							<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-							<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-						</article>
 					</div>
-					<ul class="actions">
-						<li><a href="#" class="button">Meer</a></li>
-					</ul>
-				</section>-->
-
-					<!-- Section -->
 					<section>
 						<header class="major">
 							<h2>Contact opnemen</h2>
 						</header>
 						<p>Heb je een probleem of een vraag? Of wil je gewoon even wat feedback geven over de lessen en de website, dan kan dat met de onderstaande methoden.</p>
 						<ul class="contact">
-							<li class="fa-envelope-o"><a href="mailto:CSMDevs@gmail.com" target="_blank">CSMDevs@gmail.com</a></li>
-							<li class="fa-home"><a href="https://maps.apple.com/place?address=Beurtschipper%20200%20Nieuw%20Vennep%2C%20Netherlands&ll=52.272369%2C4.632749&lsp=6489" target="_blank">Beurtschipper 200, Nieuw-Vennep, Nederland</a></li>
-							<li class="fa-twitter"><a href="https://twitter.com/csm_devs">@CSM_Devs</a></li>
-							<li class="fa-facebook"><a href="https://www.facebook.com/CSMDevs/">CSM Facebook Pagina</a></li>
-							<li class="fa-instagram"><a href="https://www.instagram.com/csm_devs/">CSM_Devs</a></li>
-							<li class="fa-github"><a href="https://github.com/CSMdevs">Onze open source projecten</a></li>
-							<li class="fa-code"><a href="http://CsmDevs@github.io">Onze website</a></li>
-
-
-
-
-							<div id="mapid"></div>
+							<li class="fa-envelope-o"><a href="mailto:CSMDevs@gmail.com">CSMDevs@gmail.com</a></li>
+							<li class="fa-twitter"><a href="//twitter.com/csm_devs" target="_blank">@CSM_Devs</a></li>
+							<li class="fa-instagram"><a href="//instagram.com/csm_devs" target="_blank">@CSM_Devs</a></li>
+							<li class="fa-code"><a href="//csmdevs.github.io" target="_blank">CSMdevs.github.io</a></li>
+						</ul>
 					</section>
 					<section>
 						<header class="major">
