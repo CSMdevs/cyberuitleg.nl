@@ -14,10 +14,18 @@ var a2 = document.getElementById('answer-2');
 var a3 = document.getElementById('answer-3');
 var a4 = document.getElementById('answer-4');
 
-var ansClicked;
+var verderCorrect = document.getElementById('verder-correct');
+var verderWrong = document.getElementById('verder-wrong');
+
+var ansRight = document.getElementById('correct');
+var ansWrong = document.getElementById('wrong');
+var buttons = document.getElementById('answer-buttons');
+
 var theClickedAns;
 
 question.style.display = 'none';
+ansRight.style.display = 'none';
+ansWrong.style.display = 'none';
 
 a1.textContent = ansOne;
 a2.textContent = ansTwo;
@@ -45,6 +53,18 @@ a4.onclick = function () {
     return;
 };
 
+verderCorrect.onclick = function () {
+    question.style.display = 'none';
+    video.style.display = 'inline';
+    video.play();
+    return;
+};
+
+verderWrong.onclick = function () {
+    question.style.display = 'none';
+    video.style.display = 'inline';
+    video.play();
+};
 
 var pausing_function = function(){
     if(this.currentTime >= pauseTime) {
@@ -60,13 +80,12 @@ var pausing_function = function(){
 };
 
 function setAnswer() {
-    alert(theClickedAns);
     checkAnswer();
     return;
 }
 
 function checkAnswer() {
-    if (ansClicked==ansCorrect) {
+    if (theClickedAns==ansCorrect) {
         ansIsCorrect();
         return;
     } else {
@@ -76,12 +95,15 @@ function checkAnswer() {
 }
 
 function ansIsCorrect() {
-    this.style.backgroundColor = "green";
+    ansRight.style.display = 'inline';
+    buttons.style.display = 'none';
     return;
 }
 
 function ansIsWrong() {
-    this.style.backgroundColor = "red";
+    ansWrong.style.display = 'inline';
+    buttons.style.display = 'none';
+    video.currentTime = 0;
     return;
 }
 
