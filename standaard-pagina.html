@@ -36,16 +36,19 @@
 									<li><a href="https://csmdevs.github.io" class="icon fa-code" target="_blank"><span class="label">CSM-Devs</span></a></li>
 								</ul>
 								</header>
-
+								
 							<!-- Content -->
 								<section>
+									<div style="position: fixed; z-index: 1000000; top: 0px; left: 0px; right: 0px; background-color: #f9f9f9;" id="already-finished">
+										<p style="width: 100%; text-align: center; font-size: 3vw; text-align: center; margin-bottom: -0.3vw;"><strong>Je hebt dit gedeelte al gedaan.</strong><a onclick="hideBanner()"><img src="images/cancel.svg" style="height: 2vw; position: fixed; right: 1.25vw; top: 1.2vw;"></a></p>
+									</div>
 									<header class="main">
 										<h1>Titel</h1>
 									</header>
 
 									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
 
-									<p>Hier moet een goede inleiding staan over de les van deze pagina. Hieronder staat een video, als het kan komen er ook vragen tussen<strong>door</strong>. Verder kan je hieronder nog meer tekst neer zetten als je dat wilt, maar het is zeker aan te raden. Hierboven moet je een goede kwaliteit foto doen zodat je het er mooi uit ziet. Gebruik het liefst een foto van <a href="https://unsplash.com">Unsplash</a>. Als dat niet kan zorg dan er wel voor dat de foto copyright free is.</p>
+									<p>Hier moet een goede inleiding staan over de les van deze pagina. Hieronder staat een video, als het kan komen er ook vragen tussen<strong>door</strong>. Verder kan je hieronder nog meer tekst neer zetten als je dat wilt, maar het is zeker aan te raden. Hierboven moet je een goede kwaliteit foto doen zodat je het er mooi uit ziet. Gebruik het liefst een foto van <a href="https://unsplash.com">Unsplash</a>. Als dat niet kan zorg dan er wel voor dat de foto copyright free is. Je moet zeggen dat ze de video moeten bekijken en dat als hij klaar is dat er dan meer opdrachten komen.</p>
 									<div id="video">
 									    <video id="intro-video" poster="images/pic01.jpg" controls style="margin-left: auto; margin-right: auto; display:block; max-width:80%; max-heigt: 500px;" data-pause1="2" data-ans1="One" data-ans2="Two" data-ans3="Three" data-ans4="Four" data-ansc="two">
 										     <source src="video/demo/video_demo.mp4" type="video/mp4">
@@ -67,31 +70,46 @@
 										</div>
 										<br>
 									</div>
-									<br>
+									<div id="after-video">
+										<br>
+										<h3>Linkjes</h3>
+										<ul>
+											<li><a href="https://michadenheijer.com" target="_blank">Voorbeeld link 1</a></li>
+											<li><a href="https://cemresuler.nl">Voorbeeld link 2</a></li>
+										</ul>
+										<p>Hieronder de video staat weer wat over wat we gezegd hebben. Je herhaald een beetje en je zorgt dat het duidelijk is wat de opdracht is die je in het filmpje hebt gegeven. Geef altijd een korte opdracht. Maximaal een minuut of vijf, als het langer is dan heeft niemand hier zin in, en als het korter is dan is het weer echt een waardeloze opdracht. Als je ook nog linkjes hebt gegeven, zet ze dan hierboven.</p>
+										<pre><code>Bijv.
+dsafjladsfjlka ejaklfdskl
+En dan moet je dit vertalen ofzo.</code></pre>
 									
+										<form name="the-answer" onsubmit="required();return false" action="#" id="the-form">
+										<p>Vul dan hier het jouw antwoord in:</p>
+											<input type='text' name ='antwoord-invul' placeholder="Vul hier je goede antwoord in....."/><br>
+											<input type="submit" name="submit" value="Verder" class="submit"/>
+										</form>
+									</div>
+									<div id="cannot-click">
+										<br>
+										<p>Je kan nog niet verder, omdat je nog geen antwoord hebt ingevuld.</p>
+									</div>
+									<div id="second">
+										<hr class="major" />
+
+										<h2>Antwoord</h2>
+										<p>Jouw antwoord was <strong id="your-answer"></strong>. Het goede antwoord was blablabla.</p>
+										<p>Het goede antwoord was blablabla, omdat ik iets moest bedenken dat ik dan hier kon typen zodat jij het dan weer zou kunnen gebruiken. Als je dat goed hebt gedaan dan zou je iets nuttigs krijgen. Maar ja dat weet ik nu niet. Als je wilt dan mag je ook nog een lijst gebruiken. Je weet echt wel zelf hoe dat moet, dat ga ik echt niet voor je doen.</p>
+										<button id="antwoord-verder">Verder</button>
+									</div>
 									
+									<div id="einde-les">
+										<hr class="major" />
+
+										<h2>Einde van deze les</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+										<p>Dit is het einde van de les, je moet ff herhalen wat ze geleerd hebben, de (korte) opdracht die ze moesten doen, en over dat er nog een volgende les is. Hier onder komt waarschijnlijk ook nog een knopje naar de volgende les.</p>
+										<button onclick="window.location.href = 'index.html';">Naar de volgende les</button>
+									</div>
 									
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-
-									<hr class="major" />
-
-									<h2>Interdum sed dapibus</h2>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-
-									<hr class="major" />
-
-									<h2>Magna etiam veroeros</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-
-									<hr class="major" />
-
-									<h2>Lorem aliquam bibendum</h2>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-
 								</section>
 
 						</div>
@@ -100,14 +118,6 @@
 				<!-- Sidebar -->
 				<div id="sidebar">
 			<div class="inner">
-
-				<!-- Search 
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
--->
 				<nav id="menu">
 					<header class="major">
 						<h2>Menu</h2>
@@ -156,16 +166,6 @@
 							<li class="fa-code"><a href="//csmdevs.github.io" target="_blank">CSMdevs.github.io</a></li>
 						</ul>
 					</section>
-					<section>
-						<header class="major">
-							<h2>Donaties</h2>
-						</header>
-						<p>Omdat wij (zoals je kan zien) geen reclames op deze website hebben, moeten wij de hosting zelf betalen. Het zou ons heel erg helpen als u een kleine donatie zou doen, waardoor de website weer wat langer gehost kan worden.</p>
-						<br>
-						<p>Doneren gaat het makkelijkt met PayPal (klik op de onderstaande knop), of je kan een mailtje sturen en dan helpen wij je met doneren op een andere manier.</p>
-						<button><a href="https://twitter.com/csm_devs" class="icon fa-paypal" target="_blank"> Doneer met PayPal<span class="label">Twitter</span></a></button> <br> <br> <br>
-					</section>
-
 					<!-- Footer -->
 					<footer id="footer">
 						<p class="copyright">&copy; <a href="https://michadenheijer.com" target="_blank">Micha den Heijer</a>, <a href="http://cemresuler.nl" target='_blank'>Cemre Süler</a>, <a href="https://instagram.com/stanverlaan/" target="_blank">Stan Verlaan</a> & <a href="https://instagram.com/patrick_13db"
@@ -186,7 +186,8 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/scrolling.js"></script>
-			<script src="assets/js/pauseVideo.js"></script>
+			<script src="assets/js/video.js"></script>
+			<script src="assets/js/continue.js"></script>
 
 	</body>
 </html>
