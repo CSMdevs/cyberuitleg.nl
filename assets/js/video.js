@@ -21,11 +21,15 @@ var ansRight = document.getElementById('correct');
 var ansWrong = document.getElementById('wrong');
 var buttons = document.getElementById('answer-buttons');
 
+var afterVideo = document.getElementById('after-video');
+
 var theClickedAns;
 
+//Hide stuff
 question.style.display = 'none';
 ansRight.style.display = 'none';
 ansWrong.style.display = 'none';
+afterVideo.style.display = 'none';
 
 a1.textContent = ansOne;
 a2.textContent = ansTwo;
@@ -53,16 +57,23 @@ a4.onclick = function () {
     return;
 };
 
+video.onended = function() {
+    afterVideo.style.display = 'inline';
+    $('html, body').animate({
+        scrollTop: $("#after-video").offset().top
+    }, 2000);
+}; 
+
 verderCorrect.onclick = function () {
     question.style.display = 'none';
-    video.style.display = 'inline';
+    video.style.display = 'initial';
     video.play();
     return;
 };
 
 verderWrong.onclick = function () {
     question.style.display = 'none';
-    video.style.display = 'inline';
+    video.style.display = 'initial';
     video.play();
 };
 
@@ -107,4 +118,5 @@ function ansIsWrong() {
     return;
 }
 
+//The stuff that's needed, but not intresting
 video.addEventListener("timeupdate", pausing_function);
