@@ -59,6 +59,7 @@ a4.onclick = function () {
 
 video.onended = function() {
     afterVideo.style.display = 'inline';
+    video.webkitExitFullScreen();
     $('html, body').animate({
         scrollTop: $("#after-video").offset().top
     }, 2000);
