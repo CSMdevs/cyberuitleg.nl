@@ -36,22 +36,22 @@ a2.textContent = ansTwo;
 a3.textContent = ansThree;
 a4.textContent = ansFour;
 
-a1.onclick = function () { 
+a1.onclick = function() {
     theClickedAns = "one";
     setAnswer();
     return;
 };
-a2.onclick = function () { 
+a2.onclick = function() {
     theClickedAns = "two";
     setAnswer();
     return;
 };
-a3.onclick = function () { 
-    theClickedAns = "three"; 
+a3.onclick = function() {
+    theClickedAns = "three";
     setAnswer();
     return;
 };
-a4.onclick = function () {  
+a4.onclick = function() {
     theClickedAns = "four";
     setAnswer();
     return;
@@ -63,31 +63,31 @@ video.onended = function() {
     $('html, body').animate({
         scrollTop: $("#after-video").offset().top
     }, 2000);
-}; 
+};
 
-verderCorrect.onclick = function () {
+verderCorrect.onclick = function() {
     question.style.display = 'none';
     video.style.display = 'initial';
     video.play();
     return;
 };
 
-verderWrong.onclick = function () {
+verderWrong.onclick = function() {
     question.style.display = 'none';
     video.style.display = 'initial';
     video.play();
 };
 
-var pausing_function = function(){
-    if(this.currentTime >= pauseTime) {
+var pausing_function = function() {
+    if (this.currentTime >= pauseTime) {
         this.pause();
 
         // remove the event listener after you paused the playback
-        this.removeEventListener("timeupdate",pausing_function);
+        this.removeEventListener("timeupdate", pausing_function);
         question.style.display = 'inline';
         video.style.display = 'none';
         video.webkitExitFullScreen();
-        
+
     }
 };
 
@@ -97,10 +97,11 @@ function setAnswer() {
 }
 
 function checkAnswer() {
-    if (theClickedAns==ansCorrect) {
+    if (theClickedAns == ansCorrect) {
         ansIsCorrect();
         return;
-    } else {
+    }
+    else {
         ansIsWrong();
         return;
     }

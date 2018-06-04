@@ -12,14 +12,15 @@ answer.style.display = 'none';
 eindeLes.style.display = 'none';
 alreadyFinished.style.visibility = 'hidden';
 
-if (getCookie("verderPressed") == "true" && getCookie('verderAllowed') =="false"){
+if (getCookie("verderPressed") == "true" && getCookie('verderAllowed') == "false") {
     cannotContinue.style.display = 'inline';
-        $('html, body').animate({
-            scrollTop: $("#cannot-click").offset().top}, 2000);
-    
+    $('html, body').animate({
+        scrollTop: $("#cannot-click").offset().top
+    }, 2000);
+
 }
 
-if (getCookie('verderAllowed')=='true'){
+if (getCookie('verderAllowed') == 'true') {
     answer.style.display = 'inline';
     cannotContinue.style.display = 'none';
     yourAnswer.innerHTML = getCookie('yourAnswer');
@@ -29,32 +30,34 @@ if (getCookie('verderAllowed')=='true'){
     }, 2000);
 }
 
-antwoordVerder.onclick = function () { 
+antwoordVerder.onclick = function() {
     eindeLes.style.display = 'inline';
     $('html, body').animate({
         scrollTop: $("#einde-les").offset().top
     }, 2000);
-    document.cookie = "finished=true; expires=Thu, 01 Jan 2019 12:00:00 UTC"; 
+    document.cookie = "finished=true; expires=Thu, 01 Jan 2019 12:00:00 UTC";
     return;
 };
 
 function required() {
     var empt = document.forms["the-answer"]["antwoord-invul"].value;
     document.cookie = "verderPressed=true";
-    if (empt == ""){
+    if (empt == "") {
         cannotContinue.style.display = 'inline';
         $('html, body').animate({
-            scrollTop: $("#cannot-click").offset().top}, 2000);
+            scrollTop: $("#cannot-click").offset().top
+        }, 2000);
         document.cookie = "verderAllowed=false";
         return false;
-    } else  {
+    }
+    else {
         answer.style.display = 'inline';
         cannotContinue.style.display = 'none';
         yourAnswer.innerHTML = empt;
         document.cookie = "yourAnswer=" + empt;
         $('html, body').animate({
-        scrollTop: $("#second").offset().top
-    }, 2000);
+            scrollTop: $("#second").offset().top
+        }, 2000);
         document.cookie = "verderAllowed=true";
         return false;
     }
@@ -64,7 +67,7 @@ function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
         while (c.charAt(0) == ' ') {
             c = c.substring(1);
@@ -78,10 +81,10 @@ function getCookie(cname) {
 
 var isFinished = getCookie('finished');
 
-if(isFinished=='true'){
+if (isFinished == 'true') {
     alreadyFinished.style.visibility = 'visible';
 }
 
-function hideBanner(){
+function hideBanner() {
     alreadyFinished.style.visibility = 'hidden';
 }
