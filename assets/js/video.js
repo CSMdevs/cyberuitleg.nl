@@ -58,7 +58,7 @@ a4.onclick = function() {
 };
 
 video.onended = function() {
-    afterVideo.style.display = 'inline';
+     $(afterVideo).show("slow");
     video.webkitExitFullScreen();
     $('html, body').animate({
         scrollTop: $("#after-video").offset().top
@@ -66,15 +66,15 @@ video.onended = function() {
 };
 
 verderCorrect.onclick = function() {
-    question.style.display = 'none';
-    video.style.display = 'initial';
+    $(question).hide("slow");
+    $(video).show("slow");
     video.play();
     return;
 };
 
 verderWrong.onclick = function() {
-    question.style.display = 'none';
-    video.style.display = 'initial';
+    $(question).hide("slow");
+    $(video).show("slow");
     video.play();
 };
 
@@ -84,9 +84,10 @@ var pausing_function = function() {
 
         // remove the event listener after you paused the playback
         this.removeEventListener("timeupdate", pausing_function);
-        question.style.display = 'inline';
-        video.style.display = 'none';
         video.webkitExitFullScreen();
+        $(question).show("slow");
+        $(video).hide("slow");
+
 
     }
 };
@@ -108,14 +109,14 @@ function checkAnswer() {
 }
 
 function ansIsCorrect() {
-    ansRight.style.display = 'inline';
-    buttons.style.display = 'none';
+    $(ansRight).show("slow");
+    $(buttons).hide("slow");
     return;
 }
 
 function ansIsWrong() {
-    ansWrong.style.display = 'inline';
-    buttons.style.display = 'none';
+    $(ansWrong).show("slow");
+    $(buttons).hide("slow");
     video.currentTime = 0;
     return;
 }
