@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>CyberUitleg | Titel</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<script src="assets/js/google/tag.js"></script>
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+	<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2MJLPK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><strong>Cyber</strong> uitleg</a>
+					<ul class="icons">
+						<li><a href="https://twitter.com/csm_devs" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/CSMDevs/" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/csm_devs/" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+						<li><a href="https://csmdevs.github.io" class="icon fa-code" target="_blank"><span class="label">CSM-Devs</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Content -->
+				<section>
+					<div style="position: fixed; z-index: 1000000; top: 0px; left: 0px; right: 0px; background-color: #f9f9f9;" id="already-finished">
+						<p style="width: 100%; text-align: center; font-size: 3vw; text-align: center; margin-bottom: -0.3vw;"><strong>Je hebt dit gedeelte al gedaan.</strong><span onclick="hideBanner()"><img src="images/cancel.svg" style="height: 2vw; position: fixed; right: 1.25vw; top: 1.2vw; cursor:pointer;"></span></p>
+					</div>
+					<header class="main">
+						<h1>Encryptie introductie</h1>
+					</header>
+
+					<span class="image main"><img src="images/encryptie-introductie-top.jpg" alt="" /></span>
+
+					<p>Encryptie is een van de belangrijkste technologieën van de 21-ste eeuw. In deze les gaan we jou uitleggen waarom encryptie als belangrijk gezien wordt,  wat je er mee gedaan wordt en waarvoor het gebruikt wordt. Bekijk het filmpje hieronder, let op! Tijdens het filmpje kan er een vraag komen die je moet beantwoorden!</p>
+					<div id="video">
+						<video id="intro-video" poster="images/encryptie-introductie-video.jpg" controls style="margin-left: auto; margin-right: auto; display:block; max-width:80%; max-heigt: 500px;" data-pause1="2" data-ans1="Het zorgt voor snellere computers" data-ans2="We gebruiken geen encryptie" data-ans3="Het zorgt voor veilige data opslag/overdracht" data-ans4="Weet ik niet" data-ansc="three">
+										     <source src="video/demo/video_demo.mp4" type="video/mp4">
+									    </video><br>
+					</div>
+					<div id="questions">
+						<h2>Waarom is encryptie belangrijk?</h2>
+						<p><i>Tip: "Weet ik niet" is meestal fout.</i></p>
+						<div id="answer-buttons">
+							<button id="answer-1" onclick="">Answer 1</button> <button id="answer-2" onclick="">Answer 2</button> <button id="answer-3" onclick="">Answer 3</button> <button id="answer-4" onclick="">Answer 4</button>
+						</div>
+						<div id="correct">
+							<p>Je hebt het goede antwoord gekozen!</p>
+							<button id="verder-correct">Verder</button>
+						</div>
+						<div id="wrong">
+							<p>Je hebt het verkeerde antwoord gekozen, je moet weer terug naar het begin.....</p>
+							<button id="verder-wrong">Verder</button>
+						</div>
+						<br>
+					</div>
+					<div id="after-video">
+						<br>
+						<p>Je hebt dus nu geleerd dat encryptie belangrijk is om ervoor te zorgen dat jouw informatie niet door anderen bekeken kan worden. Je kan dit overal toepassen, probeer zelf een aantal gebieden te bedenken  waar het handig zou zijn om encryptie te gebruiken.</p>
+						<pre><code>Voorbeeld:
+Het opslaan van wachtwoorden, een wifi verbinding etc.</code></pre>
+						<div id="answer-place">
+							<p>Vul dan hier het jouw antwoord in:</p>
+							<input type='text' name='antwoord-invul' id="antwoord-invul-plek" placeholder="Waar zou jij encryptie gebruiken......." /><br>
+							<button id="verder-after-video">Verder</button>
+						</div>
+						<div id="cannot-click">
+							<br>
+							<p>Je kan nog niet verder, omdat je nog geen antwoord hebt ingevuld.</p>
+						</div>
+					</div>
+					<div id="second">
+						<hr class="major" />
+
+						<h2>Antwoord</h2>
+						<p>Jouw antwoord was <strong id="your-answer"></strong>. Er is niet 1 goed antwoord, er zijn er heel veel.</p>
+						<p>Je zou kunnen hebben gekozen voor het beveiligen van de communicatie in het leger, tussen jouw iPad en Google als je jouw wachtwoord invult. Er is eigenlijk geen fout antwoord, want als je geen encryptie gebruikt, dan kan iedereen met jouw mee kijken en dat wil  je natuurlijk niet.</p>
+						<div id="your-answer-verder-button">
+							<button id="antwoord-verder">Verder</button>
+						</div>
+					</div>
+
+					<div id="einde-les">
+						<hr class="major" />
+
+						<h2>Einde van deze les</h2>
+						<p>In deze eerste les hebben jullie het basis principe van encryptie geleerd, ook heb je geleerd waarom het zo belangrijk is. Je hebt zelf een aantal voorbeelden bedacht waar het nodig is. Maar het is eigenlijk overal nodig, want anders kan zomaar iedereen met jou meekijken!</p>
+						<p>Volgende les ga je zelf leren hoe je encryptie moet maken, maar ook hoe je het kan kraken!</p>
+						<button onclick="window.location.href = 'encryptie-maken.html';">Naar de volgende les</button>
+						<br><br><br>
+						<h3>Meer leren?</h3>
+						<ul>
+							<li><a href="http://computertaal.info/2017/01/18/encryptie-101-is-en-wanneer-moet-gebruiken/" target="_blank">Waar moet je encryptie gebruiken?</a></li>
+							<li><a href="https://www.computeridee.nl/nieuws/partnerbijdrage-usb-security-wat-iedereen-moeten-weten-over-encryptie/">Meer over encryptie..</a></li>
+						</ul>
+					</div>
+
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<span class="opener">Encyptie</span>
+							<ul>
+								<li><a href="encryptie-introductie.html">Introductie</a></li>
+								<li><a href="encryptie-maken.html">Zelf maken</a></li>
+								<li><a href="encryptie-controleren.html">Controleren</a></li>
+								<li><a href="encryptie-toets.html">Toets</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="opener">Poorten</span>
+							<ul>
+								<li><a href="poorten-introductie.html">Introductie</a></li>
+								<li><a href="poorten-instellen.html">Instellen</a></li>
+								<li><a href="poorten-hacker.html">Verkeerd ingesteld</a></li>
+								<li><a href="poorten-quiz.html">Quiz</a></li>
+							</ul>
+						</li>
+						<li><a href="over.html">Over Ons</a></li>
+					</ul>
+				</nav>
+				<div class="mini-posts">
+					<article>
+						<header class="major">
+							<h2>Onze school</h2>
+						</header>
+						<a href="http://hvc.nl" class="image"><img src="images/hvc.jpg" alt="Het Herbert Vissers College" /></a>
+						<p>Dit project is in opdracht gemaakt voor het <a href="http://hvc.nl">Herbert Vissers College.</a> Dit project wordt ook getest op 1 vwo leerlingen van deze school.</p>
+					</article>
+				</div>
+				<section>
+					<header class="major">
+						<h2>Contact opnemen</h2>
+					</header>
+					<p>Heb je een probleem of een vraag? Of wil je gewoon even wat feedback geven over de lessen en de website, dan kan dat met de onderstaande methoden.</p>
+					<ul class="contact">
+						<li class="fa-envelope-o"><a href="mailto:CSMDevs@gmail.com">CSMDevs@gmail.com</a></li>
+						<li class="fa-twitter"><a href="//twitter.com/csm_devs" target="_blank">@CSM_Devs</a></li>
+						<li class="fa-instagram"><a href="//instagram.com/csm_devs" target="_blank">@CSM_Devs</a></li>
+						<li class="fa-code"><a href="//csmdevs.github.io" target="_blank">CSMdevs.github.io</a></li>
+					</ul>
+				</section>
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; <a href="https://michadenheijer.com" target="_blank">Micha den Heijer</a>, <a href="http://cemresuler.nl" target='_blank'>Cemre Süler</a>, <a href="https://instagram.com/stanverlaan/" target="_blank">Stan Verlaan</a> & <a href="https://instagram.com/patrick_13db"
+						 target="_blank">Patrick de Bruijn</a>. All rights reserved. Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+				</footer>
+
+			</div>
+		</div>
+
+	</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/scrolling.js"></script>
+	<script src="assets/js/video.js"></script>
+	<script src="assets/js/continue.js"></script>
+
+</body>
+
+</html>
