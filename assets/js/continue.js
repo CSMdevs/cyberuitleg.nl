@@ -12,6 +12,23 @@ answer.style.display = 'none';
 eindeLes.style.display = 'none';
 alreadyFinished.style.visibility = 'hidden';
 
+if (getCookie("verderPressed") == "true" && getCookie('verderAllowed') =="false"){
+    cannotContinue.style.display = 'inline';
+        $('html, body').animate({
+            scrollTop: $("#cannot-click").offset().top}, 2000);
+    
+}
+
+if (getCookie('verderAllowed')=='true'){
+    answer.style.display = 'inline';
+    cannotContinue.style.display = 'none';
+    yourAnswer.innerHTML = getCookie('yourAnswer');
+    document.getElementById('antwoord-invul-plek').value = getCookie('yourAnswer');
+    $('html, body').animate({
+        scrollTop: $("#second").offset().top
+    }, 2000);
+}
+
 antwoordVerder.onclick = function () { 
     eindeLes.style.display = 'inline';
     $('html, body').animate({
@@ -23,19 +40,22 @@ antwoordVerder.onclick = function () {
 
 function required() {
     var empt = document.forms["the-answer"]["antwoord-invul"].value;
+    document.cookie = "verderPressed=true";
     if (empt == ""){
         cannotContinue.style.display = 'inline';
         $('html, body').animate({
-        scrollTop: $("#cannot-click").offset().top
-    }, 2000);
+            scrollTop: $("#cannot-click").offset().top}, 2000);
+        document.cookie = "verderAllowed=false";
         return false;
     } else  {
         answer.style.display = 'inline';
         cannotContinue.style.display = 'none';
         yourAnswer.innerHTML = empt;
+        document.cookie = "yourAnswer=" + empt;
         $('html, body').animate({
         scrollTop: $("#second").offset().top
     }, 2000);
+        document.cookie = "verderAllowed=true";
         return false;
     }
 }
