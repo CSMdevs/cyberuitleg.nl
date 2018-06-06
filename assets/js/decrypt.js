@@ -1,38 +1,62 @@
-var decrypted = document.getElementById("decoded");
-var encrypted = document.getElementById("encoded");
+var $decryption = $('.decryption');
+var originalText = $decryption.text();
 
-function startdecrypt() {
-    // Original text, split into an array and reversed (for faster pop())
-    var originalText = decrypted.textContent.split('').reverse();
-    var decryptedText = "";
-    var i = 0;
-  
-    decrypted.textContent = "";
-   
-    var shuffleInterval = setInterval(function(){
-      
-      // Generate random strings. You can modify the generator function range
-      // (Math.random()*(to-from+1)+from);
-      var shuffledText = '';
-      var j = originalText.length;
-      while(j--) shuffledText += String.fromCharCode((Math.random()*94+33) | 0);
-      
-      // On every 10 cycles, remove a character from the original text to the decoded text
-      if(i++ % 10 === 0) decryptedText += originalText.pop();
-      
-      // Display
-      decrypted.textContent = decryptedText;
-      encrypted.textContent = shuffledText;
-      
-      // Stop when done
-      if(!shuffledText.length) clearInterval(shuffleInterval);
-      
-    // 50ms looks more dramatic
-    },50);
+function decrypt(el) {
+
+  var clock = 0;
+  var encryptedLocations = null;
+
+  var ALPHABET = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@~&/%$#';
+  var DELAY = 6;
+  var OFFSET = 16;
+
+
+  function easeFn(x) {
+    return Math.round(Math.log(Math.max(0, x - OFFSET)));
+  }
+
+
+  function tick() {
+    var textArray = originalText.split('');
+
+    if (encryptedLocations === null) {
+      encryptedLocations = _.range(originalText.length);
+    }
+
+    if (clock % DELAY === 0) {
+      for (var i = 0; i < encryptedLocations.length; ++i) {
+        var k = _.random(0, ALPHABET.length - 1);
+        var l = encryptedLocations[i];
+        textArray[l] = '<span class="blackout">' + ALPHABET[k]  + '</span>';
+      }
+
+      remCount = easeFn(clock);
+      for (var i = 0; i < _.min([remCount, encryptedLocations.length]); ++i) {
+        var k = _.random(0, encryptedLocations.length - 1);
+        var l = encryptedLocations[k];
+        textArray[l] = originalText.charAt(l);
+        if (encryptedLocations.length >= 1) {
+          encryptedLocations.splice(k, 1);
+        }
+      }
+
+      console.log("Remove count:", remCount);
+      console.log('Text:', textArray.join(''));
+      console.log("Locations:", encryptedLocations);
+
+      $decryption.html(textArray.join(''));
+    }
+
+    ++clock;
+
+    if (encryptedLocations.length > 0) {
+      window.requestAnimationFrame(tick);
+    }
+  }
+
+  window.requestAnimationFrame(tick);
 }
 
-if (window.addEventListener) {
-    window.addEventListener('load', startdecrypt, false); //W3C
-} else {
-    window.attachEvent('onload', startdecrypt); //IE
-}
+decrypt($('.decryption'));
+
+$('button').click(function() { decrypt($('.decryption')); });
