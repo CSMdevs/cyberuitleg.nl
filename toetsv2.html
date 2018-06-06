@@ -16,6 +16,7 @@
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<link rel="icon" href="images/favicon.ico">
+	
 </head>
 
 <body>
@@ -40,78 +41,16 @@
 				</header>
 
 				<!-- Content -->
-				<section>
-					<div style="position: fixed; z-index: 1000000; top: 0px; left: 0px; right: 0px; background-color: #f9f9f9;" id="already-finished">
-						<p style="width: 100%; text-align: center; font-size: 3vw; text-align: center; margin-bottom: -0.3vw;"><strong>Je hebt dit gedeelte al gedaan.</strong><span onclick="hideBanner()"><img src="images/cancel.svg" style="height: 2vw; position: fixed; right: 1.25vw; top: 1.2vw; cursor:pointer;"></span></p>
+				<section id="quiz-thing-name">
+					<h1>Quiz on Important Facts</h1>
+					<div class="quiz-container">
+						<div id="quiz"></div>
 					</div>
-					<header class="main">
-						<h1>Encryptie introductie</h1>
-					</header>
-
-					<span class="image main"><img src="images/encryptie-introductie-top.jpg" alt=""/></span>
-
-					<p>Encryptie is een van de belangrijkste technologieën van de 21-ste eeuw. In deze les gaan we jou uitleggen waarom encryptie als belangrijk gezien wordt,  wat je er mee gedaan wordt en waarvoor het gebruikt wordt. Bekijk het filmpje hieronder, let op! Tijdens het filmpje kan er een vraag komen die je moet beantwoorden!</p>
-					<div id="video">
-						<video id="intro-video" poster="images/encryptie-introductie-video.jpg" controls style="margin-left: auto; margin-right: auto; display:block; max-width:80%; max-heigt: 500px;" data-pause1="2" data-ans1="Het zorgt voor snellere computers" data-ans2="We gebruiken geen encryptie" data-ans3="Het zorgt voor veilige data opslag/overdracht" data-ans4="Weet ik niet" data-ansc="three">
-										     <source src="video/demo/video_demo.mp4" type="video/mp4">
-									    </video><br>
-					</div>
-					<div id="questions">
-						<h2>Waarom is encryptie belangrijk?</h2>
-						<p><i>Tip: "Weet ik niet" is meestal fout.</i></p>
-						<div id="answer-buttons">
-							<button id="answer-1" onclick="">Answer 1</button> <button id="answer-2" onclick="">Answer 2</button> <button id="answer-3" onclick="">Answer 3</button> <button id="answer-4" onclick="">Answer 4</button>
-						</div>
-						<div id="correct">
-							<p>Je hebt het goede antwoord gekozen!</p>
-							<button id="verder-correct">Verder</button>
-						</div>
-						<div id="wrong">
-							<p>Je hebt het verkeerde antwoord gekozen, je moet weer terug naar het begin.....</p>
-							<button id="verder-wrong">Verder</button>
-						</div>
-						<br>
-					</div>
-					<div id="after-video">
-						<br>
-						<p>Je hebt dus nu geleerd dat encryptie belangrijk is om ervoor te zorgen dat jouw informatie niet door anderen bekeken kan worden. Je kan dit overal toepassen, probeer zelf een aantal gebieden te bedenken  waar het handig zou zijn om encryptie te gebruiken.</p>
-						<pre><code>Voorbeeld:
-Het opslaan van wachtwoorden, een wifi verbinding etc.</code></pre>
-						<div id="answer-place">
-							<p>Vul dan hier het jouw antwoord in:</p>
-							<input type='text' name='antwoord-invul' id="antwoord-invul-plek" placeholder="Waar zou jij encryptie gebruiken......." /><br>
-							<button id="verder-after-video">Verder</button>
-						</div>
-						<div id="cannot-click">
-							<br>
-							<p>Je kan nog niet verder, omdat je nog geen antwoord hebt ingevuld.</p>
-						</div>
-					</div>
-					<div id="second">
-						<hr class="major" />
-
-						<h2>Antwoord</h2>
-						<p>Jouw antwoord was <strong id="your-answer"></strong>. Er is niet 1 goed antwoord, er zijn er heel veel.</p>
-						<p>Je zou kunnen hebben gekozen voor het beveiligen van de communicatie in het leger, tussen jouw iPad en Google als je jouw wachtwoord invult. Er is eigenlijk geen fout antwoord, want als je geen encryptie gebruikt, dan kan iedereen met jouw mee kijken en dat wil  je natuurlijk niet.</p>
-						<div id="your-answer-verder-button">
-							<button id="antwoord-verder">Verder</button>
-						</div>
-					</div>
-
-					<div id="einde-les">
-						<hr class="major" />
-
-						<h2>Einde van deze les</h2>
-						<p>In deze eerste les hebben jullie het basis principe van encryptie geleerd, ook heb je geleerd waarom het zo belangrijk is. Je hebt zelf een aantal voorbeelden bedacht waar het nodig is. Maar het is eigenlijk overal nodig, want anders kan zomaar iedereen met jou meekijken!</p>
-						<p>Volgende les ga je zelf leren hoe je encryptie moet maken, maar ook hoe je het kan kraken!</p>
-						<button onclick="window.location.href = 'encryptie-maken.html';">Naar de volgende les</button>
-						<br><br><br>
-						<h3>Meer leren?</h3>
-						<ul>
-							<li><a href="http://computertaal.info/2017/01/18/encryptie-101-is-en-wanneer-moet-gebruiken/" target="_blank">Waar moet je encryptie gebruiken?</a></li>
-							<li><a href="https://www.computeridee.nl/nieuws/partnerbijdrage-usb-security-wat-iedereen-moeten-weten-over-encryptie/">Meer over encryptie..</a></li>
-						</ul>
-					</div>
+					<br><br>
+					<button id="previous">Previous Question</button>
+					<button id="next">Next Question</button>
+					<button id="submit">Submit Quiz</button>
+					<div id="results"></div>
 
 				</section>
 
@@ -183,15 +122,89 @@ Het opslaan van wachtwoorden, een wifi verbinding etc.</code></pre>
 	</div>
 
 	<!-- Scripts -->
+	<script src="assets/js/quiz.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/scrolling.js"></script>
-	<script src="assets/js/video.js"></script>
-	<script src="assets/js/continue.js"></script>
 
 </body>
+<style>
+		/*body {
+			font-size: 20px;
+			font-family: 'Work Sans', sans-serif;
+			color: #333;
+			font-weight: 300;
+			
+			background-color: #f8f6f0;
+		}*/
 
+		h1 {
+			font-weight: 300;
+			margin: 0px;
+			padding: 10px;
+			font-size: 20px;
+			background-color: #444;
+			color: #fff;
+		}
+
+		.question {
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+
+		.answers {
+			margin-bottom: 20px;
+			text-align: left;
+			display: inline-block;
+		}
+		/*
+		.answers label {
+			display: block;
+			margin-bottom: 10px;
+		}*/
+
+		button {
+			font-family: 'Work Sans', sans-serif;
+			font-size: 22px;
+			background-color: #279;
+			color: #fff;
+			border: 0px;
+			border-radius: 3px;
+			padding: 20px;
+			cursor: pointer;
+			margin-bottom: 20px;
+		}
+
+		button:hover {
+			background-color: #38a;
+		}
+		
+		.slide {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			z-index: 1;
+			opacity: 0;
+			transition: opacity 0.5s;
+		}
+
+		.active-slide {
+			opacity: 1;
+			z-index: 2;
+		}
+
+		.quiz-container {
+			position: relative;
+			height: 200px;
+			margin-top: 40px;
+		}
+		
+		#quiz-thing-name{
+			text-align: center;
+		}
+	</style>
 </html>
