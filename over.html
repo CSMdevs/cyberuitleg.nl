@@ -12,6 +12,8 @@
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<link rel="icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+	<script src="bower_components/aos/dist/aos.js"></script>
 
 </head>
 
@@ -20,7 +22,7 @@
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2MJLPK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
 	<!-- Wrapper -->
-	<div id="wrapper">
+	<div id="wrapper" >
 
 		<!-- Main -->
 		<div id="main">
@@ -39,12 +41,14 @@
 
 				<!-- Content -->
 				<section>
+					<div data-aos="fade-up">
 					<header class="main">
 						<h1>Over</h1>
 					</header>
 
 					<p>Wij zijn een aantal leerlingen uit 4v2 (van het <a href="http://hvc.nl" target="_blank">Herbert Vissers College</a>) en wij hebben als opdracht gekregen om kinderen uit 1 vwo te laten leren over wat cyberveiligheid is. Wij hebben twee onderwerpen
 						gekozen waar wij met die leerlingen dieper op in gaan, zodat zij onze lessen ook voor hun zelf kunnen gebruiken.</p>
+						
 					<p>Vandaag de dag is cybersecurity één van de belangrijkste onderwerpen op het gebied van informatica. Het internet groeit met de dag en de duistere kant van het internet staat daarbij niet stil. Iedere keer dat er nieuwe software wordt ontwikelt komen
 						er ook fouten voor in de software aangezien de software gemaakt wordt door mensen, en fouten maken nu eenmaal menselijk is. Criminelen kunnen van deze fouten vervolgens weer gebruik maken, daarom is cybersecurity zo belangrijk; we willen mensen
 						namelijk zo veilig als mogelijk data laten delen op het internet zonder dat andere daar iets mee kunnen doen.</p>
@@ -53,9 +57,9 @@
 						een veel gebruikte manier om een netwerk te hacken, aangezien de meeste mensen onbewust poorten (deuren) open laten staan. Welkom inbreker ;).</p>
 					<p>Over deze 2 onderwerpen zijn op deze site allerlei opdrachten te vinden. Voor iedere opdracht kan je punten verdienen en het met het totaal van deze punten kom je op het leaderbord terecht om zo te strijden voor een prijs. Dus begin snel met 1 van
 						deze onderwerpen: <a href="">Encyptie</a> of <a href="">Poorten</a>.</p>
-
+</div>
 					<hr class="major" />
-
+	<div data-aos="fade-up">
 					<header class="main">
 						<h1>Ontwikkelaars</h1>
 					</header>
@@ -78,8 +82,8 @@
 						<li><a href="https://csmdevs.github.io" class="icon fa-code" target="_blank"><span class="label">Mijn Website</span></a></li>
 					</ul>
 					
-					
-					
+					</div>
+						<div data-aos="fade-up">
 					<hr class="major" />
 
 				
@@ -99,9 +103,9 @@
 						<li><a href="https://steamcommunity.com/id/CemreSuler" class="icon fa-steam" target="_blank"><span class="label">Steam</span></a></li>
 						<li><a href="https://CemreSuler.nl" class="icon fa-code" target="_blank"><span class="label">Mijn Website</span></a></li>
 					</ul>
+					</div>
 					
-					
-					
+						<div data-aos="fade-up">
 					<hr class="major" />
 
 					<h2>Micha den Heijer - CEO at CSM-Devs</h2>
@@ -121,8 +125,8 @@
 						<li><a href="https://Michadenheijer.com" class="icon fa-code" target="_blank"><span class="label">Mijn Website</span></a></li>
 					</ul>
 					
-					
-					
+					</div>
+						<div data-aos="fade-up">
 					<hr class="major" />
 
 					<h2>Patrick de Bruijn - Outside collaborator</h2>
@@ -139,8 +143,8 @@
 						<li><a href="/patrick/" class="icon fa-code" target="_blank"><span class="label">Mijn Website</span></a></li>
 					</ul>
 			
-					
-					
+					</div>
+						<div data-aos="fade-up">
 					<hr class="major" />
 					<div class="profile-title">
 						<div class="profile-all profile-divpic">
@@ -162,6 +166,7 @@
 						<li><a href="https://steamcommunity.com/profiles/76561198358592445/" class="icon fa-steam" target="_blank"><span class="label">Reddit</span></a></li>
 						<li><a href="/stan/" class="icon fa-code" target="_blank"><span class="label">Mijn Website</span></a></li>
 					</ul>
+					</div>
 				</section>
 
 			</div>
@@ -250,12 +255,16 @@
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/decrypt.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/scrolling.js"></script>
-
+<script>
+	
+	AOS.init();
+	</script>
 </body>
 
 </html>

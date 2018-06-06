@@ -16,6 +16,8 @@
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<link rel="icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+	<script src="bower_components/aos/dist/aos.js"></script>
 
 </head>
 
@@ -41,100 +43,204 @@
 				</header>
 
 				<!-- Content -->
-				<h2 class="quizHeader">Take a Quiz!</h2>
+				<h2 class="quizHeader">Hier komt de titel van de toets (op dit moment is alleen antwoord a goed)</h2>
 
-				<table style="width:583px">
-					<tr>
-						<td>
-							<div>
-								<p class="question">1. Quiz question #1</p>
 
-								<ul>
-									<input class="answer" type="radio" name="q1" value="1">
-									<label id="correctString1">correct answer 1</label>
-									<br>
-									<input class="answer" type="radio" name="q1" value="0">
-									<label>wrong answer</label>
-									<br>
-									<input class="answer" type="radio" name="q1" value="0">
-									<label>wrong answer</label>
-									<br>
-									<input class="answer" type="radio" name="q1" value="0">
-									<label>wrong answer</label>
-								</ul>
-							</div>
-						</td>
-						<td>
-							<div>
-								<p class="question">2. Quiz question #2</p>
+				<!-- Place "id="correctStringN"" waar N het nummer van de vraag is On the right answer label! -->
 
-								<ul>
-									<input class="answer" type="radio" name="q2" value="0">
-									<label>wrong answer</label>
-									<br>
-									<input class="answer" type="radio" name="q2" value="1">
-									<label id="correctString2">correct answer 2</label>
-									<br>
-									<input class="answer" type="radio" name="q2" value="0">
-									<label>wrong answer</label>
-									<br>
-									<input class="answer" type="radio" name="q2" value="0">
-									<label>wrong answer</label>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div>
-								<p class="question">3. Quiz question #3</p>
+				<div data-aos="fade-up">
+					<p class="question">Dit is vraag 1</p>
 
-								<ul>
-									<input class="answer" type="radio" name="q3" value="0">
-									<label>wrong answer</label>
-									<br>
-									<input class="answer" type="radio" name="q3" value="1">
-									<label id="correctString3">correct answer 3</label>
-									<br>
-									<input class="answer" type="radio" name="q3" value="0">
-									<label>wrong answer</label>
-									<br>
-									<input class="answer" type="radio" name="q3" value="0">
-									<label>wrong answer</label>
-								</ul>
-							</div>
-						</td>
-						<td>
-							<div>
-								<p class="question">4. Quiz question #4</p>
+					<ul>
+						<input class="answer" type="radio" name="q1" value="1" id="a1-1">
+						<label id="correctString1" for="a1-1">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q1" value="0" id="a1-2">
+						<label for="a1-2">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q1" value="0" id="a1-3">
+						<label for="a1-3">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q1" value="0" id="a1-4">
+						<label for="a1-4">Antwoord Hier</label>
+						<div class="quizAnswers" id="correctAnswer1"></div>
+					</ul>
+				</div>
 
-								<ul>
-									<input class="answer" type="radio" name="q4" value="0">
-									<label>wrong answer</label>
-									<br>
-									<input class="answer" type="radio" name="q4" value="1">
-									<label id="correctString4">correct answer 4</label>
-									<br>
-									<input class="answer" type="radio" name="q4" value="0">
-									<label>wrong answer</label>
-									<br>
-									<input class="answer" type="radio" name="q4" value="0">
-									<label>wrong answer</label>
-								</ul>
-							</div>
-						</td>
-					</tr>
-				</table>
+				<div data-aos="fade-up">
+					<p class="question">Dit is vraag 2</p>
+
+					<ul>
+						<input class="answer" type="radio" name="q2" value="1" id="a2-1">
+						<label id="correctString2" for="a2-1">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q2" value="0" id="a2-2">
+						<label for="a2-2">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q2" value="0" id="a2-3">
+						<label for="a2-3">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q2" value="0" id="a2-4">
+						<label for="a2-4">Antwoord Hier</label>
+	<div class="quizAnswers" id="correctAnswer2"></div>
+					</ul>
+				</div>
+				<div data-aos="fade-up">
+					<p class="question">Dit is vraag 3</p>
+
+					<ul>
+						<input class="answer" type="radio" name="q3" value="1" id="a3-1">
+						<label id="correctString3" for="a3-1">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q3" value="0" id="a3-2">
+						<label for="a3-2">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q3" value="0" id="a3-3">
+						<label for="a3-3">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q3" value="0" id="a3-4">
+						<label for="a3-4">Antwoord Hier</label>
+	<div class="quizAnswers" id="correctAnswer3"></div>
+					</ul>
+				</div>
+				<div data-aos="fade-up">
+					<p class="question">Dit is vraag 4</p>
+
+					<ul>
+						<input class="answer" type="radio" name="q4" value="1" id="a4-1">
+						<label id="correctString4" for="a4-1">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q4" value="0" id="a4-2">
+						<label for="a4-2">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q4" value="0" id="a4-3">
+						<label for="a4-3">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q4" value="0" id="a4-4">
+						<label for="a4-4">Antwoord Hier</label>
+	<div class="quizAnswers" id="correctAnswer4"></div>
+					</ul>
+				</div>
+				<div data-aos="fade-up">
+					<p class="question">Dit is vraag 5</p>
+
+					<ul>
+						<input class="answer" type="radio" name="q5" value="1" id="a5-1">
+						<label id="correctString5" for="a5-1">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q5" value="0" id="a5-2">
+						<label for="a5-2">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q5" value="0" id="a5-3">
+						<label for="a5-3">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q5" value="0" id="a5-4">
+						<label for="a5-4">Antwoord Hier</label>
+	<div class="quizAnswers" id="correctAnswer5"></div>
+					</ul>
+				</div>
+				<div data-aos="fade-up">
+					<p class="question">Dit is vraag 6</p>
+
+					<ul>
+						<input class="answer" type="radio" name="q6" value="1" id="a6-1">
+						<label id="correctString6" for="a6-1">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q6" value="0" id="a6-2">
+						<label for="a6-2">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q6" value="0" id="a6-3">
+						<label for="a6-3">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q6" value="0" id="a6-4">
+						<label for="a6-4">Antwoord Hier</label>
+	<div class="quizAnswers" id="correctAnswer6"></div>
+					</ul>
+				</div>
+				<div data-aos="fade-up">
+					<p class="question">Dit is vraag 7</p>
+
+					<ul>
+						<input class="answer" type="radio" name="q7" value="1" id="a7-1">
+						<label id="correctString7" for="a7-1">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q7" value="0" id="a7-2">
+						<label for="a7-2">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q7" value="0" id="a7-3">
+						<label for="a7-3">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q7" value="0" id="a7-4">
+						<label for="a7-4">Antwoord Hier</label>
+	<div class="quizAnswers" id="correctAnswer7"></div>
+					</ul>
+				</div>
+				<div data-aos="fade-up">
+					<p class="question">Dit is vraag 8</p>
+
+					<ul>
+						<input class="answer" type="radio" name="q8" value="1" id="a8-1">
+						<label id="correctString8" for="a8-1">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q8" value="0" id="a8-2">
+						<label for="a8-2">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q8" value="0" id="a8-3">
+						<label for="a8-3">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q8" value="0" id="a8-4">
+						<label for="a8-4">Antwoord Hier</label>
+	<div class="quizAnswers" id="correctAnswer8"></div>
+					</ul>
+				</div>
+				<div data-aos="fade-up">
+					<p class="question">Dit is vraag 9</p>
+
+					<ul>
+						<input class="answer" type="radio" name="q9" value="1" id="a9-1">
+						<label id="correctString9" for="a9-1">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q9" value="0" id="a9-2">
+						<label for="a9-2">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q9" value="0" id="a9-3">
+						<label for="a9-3">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q9" value="0" id="a9-4">
+						<label for="a9-4">Antwoord Hier</label>
+	<div class="quizAnswers" id="correctAnswer9"></div>
+					</ul>
+				</div>
+				<div data-aos="fade-up">
+					<p class="question">Dit is vraag 10</p>
+
+					<ul>
+						<input class="answer" type="radio" name="q10" value="1" id="a10-1">
+						<label id="correctString10" for="a10-1">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q10" value="0" id="a10-2">
+						<label for="a10-2">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q10" value="0" id="a10-3">
+						<label for="a10-3">Antwoord Hier</label>
+						<br>
+						<input class="answer" type="radio" name="q10" value="0" id="a10-4">
+						<label for="a10-4">Antwoord Hier</label>
+	<div class="quizAnswers" id="correctAnswer10"></div>
+					</ul>
+				</div>
+
+
+
 				<br/>
 				<div class="submitter">
-					<input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
+					<input class="quizSubmit" id="submitButton" onClick="show_alert()" type="submit" value="Verzenden" />
 				</div>
 
 				<!--show only wrong answers on submit-->
-				<div class="quizAnswers" id="correctAnswer1"></div>
-				<div class="quizAnswers" id="correctAnswer2"></div>
-				<div class="quizAnswers" id="correctAnswer3"></div>
-				<div class="quizAnswers" id="correctAnswer4"></div>
+			
+			
+			
 
 				<!--show score upon submit-->
 				<div>
@@ -146,64 +252,8 @@
 		</div>
 	</div>
 
-	<!-- Sidebar -->
-	<div id="sidebar">
-		<div class="inner">
-			<nav id="menu">
-				<header class="major">
-					<h2>Menu</h2>
-				</header>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li>
-						<span class="opener">Encyptie</span>
-						<ul>
-							<li><a href="encryptie-introductie.html">Introductie</a></li>
-							<li><a href="encryptie-maken.html">Zelf maken</a></li>
-							<li><a href="encryptie-controleren.html">Controleren</a></li>
-							<li><a href="encryptie-toets.html">Toets</a></li>
-						</ul>
-					</li>
-					<li>
-						<span class="opener">Poorten</span>
-						<ul>
-							<li><a href="poorten-introductie.html">Introductie</a></li>
-							<li><a href="poorten-instellen.html">Instellen</a></li>
-							<li><a href="poorten-hacker.html">Verkeerd ingesteld</a></li>
-							<li><a href="poorten-quiz.html">Quiz</a></li>
-						</ul>
-					</li>
-					<li><a href="over.html">Over Ons</a></li>
-				</ul>
-			</nav>
-			<div class="mini-posts">
-				<article>
-					<header class="major">
-						<h2>Onze school</h2>
-					</header>
-					<a href="http://hvc.nl" class="image"><img src="images/hvc.jpg" alt="Het Herbert Vissers College" /></a>
-					<p>Dit project is in opdracht gemaakt voor het <a href="http://hvc.nl">Herbert Vissers College.</a> Dit project wordt ook getest op 1 vwo leerlingen van deze school.</p>
-				</article>
-			</div>
-			<section>
-				<header class="major">
-					<h2>Contact opnemen</h2>
-				</header>
-				<p>Heb je een probleem of een vraag? Of wil je gewoon even wat feedback geven over de lessen en de website, dan kan dat met de onderstaande methoden.</p>
-				<ul class="contact">
-					<li class="fa-envelope-o"><a href="mailto:CSMDevs@gmail.com">CSMDevs@gmail.com</a></li>
-					<li class="fa-twitter"><a href="//twitter.com/csm_devs" target="_blank">@CSM_Devs</a></li>
-					<li class="fa-instagram"><a href="//instagram.com/csm_devs" target="_blank">@CSM_Devs</a></li>
-					<li class="fa-code"><a href="//csmdevs.github.io" target="_blank">CSMdevs.github.io</a></li>
-				</ul>
-			</section>
-			<!-- Footer -->
-			<footer id="footer">
-				<p class="copyright">&copy; <a href="https://michadenheijer.com" target="_blank">Micha den Heijer</a>, <a href="http://cemresuler.nl" target='_blank'>Cemre Süler</a>, <a href="https://instagram.com/stanverlaan/" target="_blank">Stan Verlaan</a> & <a href="https://instagram.com/patrick_13db"
-					 target="_blank">Patrick de Bruijn</a>. All rights reserved. Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-			</footer>
 
-		</div>
+
 	</div>
 
 	</div>
@@ -211,91 +261,17 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="assets/js/quiz.js"></script>
+	<script src="assets/js/quizv2.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/scrolling.js"></script>
-
+	<script>
+		AOS.init();
+	</script>
 </body>
-<style>
-	/*body {
-			font-size: 20px;
-			font-family: 'Work Sans', sans-serif;
-			color: #333;
-			font-weight: 300;
-			
-			background-color: #f8f6f0;
-		}*/
 
-	h1 {
-		font-weight: 300;
-		margin: 0px;
-		padding: 10px;
-		font-size: 20px;
-		background-color: #444;
-		color: #fff;
-	}
-
-	.question {
-		font-size: 30px;
-		margin-bottom: 10px;
-	}
-
-	.answers {
-		margin-bottom: 20px;
-		text-align: left;
-		display: inline-block;
-	}
-
-	/*
-		.answers label {
-			display: block;
-			margin-bottom: 10px;
-		}*/
-
-	button {
-		font-family: 'Work Sans', sans-serif;
-		font-size: 22px;
-		background-color: #279;
-		color: #fff;
-		border: 0px;
-		border-radius: 3px;
-		padding: 20px;
-		cursor: pointer;
-		margin-bottom: 20px;
-	}
-
-	button:hover {
-		background-color: #38a;
-	}
-
-	.slide {
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		width: 100%;
-		z-index: 1;
-		opacity: 0;
-		transition: opacity 0.5s;
-	}
-
-	.active-slide {
-		opacity: 1;
-		z-index: 2;
-	}
-
-	.quiz-container {
-		position: relative;
-		height: 200px;
-		margin-top: 40px;
-	}
-
-	#quiz-thing-name {
-		text-align: center;
-	}
-</style>
 
 </html>
