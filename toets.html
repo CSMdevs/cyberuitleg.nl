@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>CyberUitleg | Titel</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<script src="assets/js/google/tag.js"></script>
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<link rel="icon" href="images/favicon.ico">
+
+</head>
+
+<body>
+	<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2MJLPK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><strong>Cyber</strong> uitleg</a>
+					<ul class="icons">
+						<li><a href="https://twitter.com/csm_devs" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/CSMDevs/" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/csm_devs/" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+						<li><a href="https://csmdevs.github.io" class="icon fa-code" target="_blank"><span class="label">CSM-Devs</span></a></li>
+					</ul>
+				</header>
+
+				<!-- Content -->
+				<h2 class="quizHeader">Take a Quiz!</h2>
+
+				<table style="width:583px">
+					<tr>
+						<td>
+							<div>
+								<p class="question">1. Quiz question #1</p>
+
+								<ul>
+									<input class="answer" type="radio" name="q1" value="1">
+									<label id="correctString1">correct answer 1</label>
+									<br>
+									<input class="answer" type="radio" name="q1" value="0">
+									<label>wrong answer</label>
+									<br>
+									<input class="answer" type="radio" name="q1" value="0">
+									<label>wrong answer</label>
+									<br>
+									<input class="answer" type="radio" name="q1" value="0">
+									<label>wrong answer</label>
+								</ul>
+							</div>
+						</td>
+						<td>
+							<div>
+								<p class="question">2. Quiz question #2</p>
+
+								<ul>
+									<input class="answer" type="radio" name="q2" value="0">
+									<label>wrong answer</label>
+									<br>
+									<input class="answer" type="radio" name="q2" value="1">
+									<label id="correctString2">correct answer 2</label>
+									<br>
+									<input class="answer" type="radio" name="q2" value="0">
+									<label>wrong answer</label>
+									<br>
+									<input class="answer" type="radio" name="q2" value="0">
+									<label>wrong answer</label>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<p class="question">3. Quiz question #3</p>
+
+								<ul>
+									<input class="answer" type="radio" name="q3" value="0">
+									<label>wrong answer</label>
+									<br>
+									<input class="answer" type="radio" name="q3" value="1">
+									<label id="correctString3">correct answer 3</label>
+									<br>
+									<input class="answer" type="radio" name="q3" value="0">
+									<label>wrong answer</label>
+									<br>
+									<input class="answer" type="radio" name="q3" value="0">
+									<label>wrong answer</label>
+								</ul>
+							</div>
+						</td>
+						<td>
+							<div>
+								<p class="question">4. Quiz question #4</p>
+
+								<ul>
+									<input class="answer" type="radio" name="q4" value="0">
+									<label>wrong answer</label>
+									<br>
+									<input class="answer" type="radio" name="q4" value="1">
+									<label id="correctString4">correct answer 4</label>
+									<br>
+									<input class="answer" type="radio" name="q4" value="0">
+									<label>wrong answer</label>
+									<br>
+									<input class="answer" type="radio" name="q4" value="0">
+									<label>wrong answer</label>
+								</ul>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<div class="submitter">
+					<input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
+				</div>
+
+				<!--show only wrong answers on submit-->
+				<div class="quizAnswers" id="correctAnswer1"></div>
+				<div class="quizAnswers" id="correctAnswer2"></div>
+				<div class="quizAnswers" id="correctAnswer3"></div>
+				<div class="quizAnswers" id="correctAnswer4"></div>
+
+				<!--show score upon submit-->
+				<div>
+					<h2 class="quizScore" id="userScore"></h2>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+	<!-- Sidebar -->
+	<div id="sidebar">
+		<div class="inner">
+			<nav id="menu">
+				<header class="major">
+					<h2>Menu</h2>
+				</header>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li>
+						<span class="opener">Encyptie</span>
+						<ul>
+							<li><a href="encryptie-introductie.html">Introductie</a></li>
+							<li><a href="encryptie-maken.html">Zelf maken</a></li>
+							<li><a href="encryptie-controleren.html">Controleren</a></li>
+							<li><a href="encryptie-toets.html">Toets</a></li>
+						</ul>
+					</li>
+					<li>
+						<span class="opener">Poorten</span>
+						<ul>
+							<li><a href="poorten-introductie.html">Introductie</a></li>
+							<li><a href="poorten-instellen.html">Instellen</a></li>
+							<li><a href="poorten-hacker.html">Verkeerd ingesteld</a></li>
+							<li><a href="poorten-quiz.html">Quiz</a></li>
+						</ul>
+					</li>
+					<li><a href="over.html">Over Ons</a></li>
+				</ul>
+			</nav>
+			<div class="mini-posts">
+				<article>
+					<header class="major">
+						<h2>Onze school</h2>
+					</header>
+					<a href="http://hvc.nl" class="image"><img src="images/hvc.jpg" alt="Het Herbert Vissers College" /></a>
+					<p>Dit project is in opdracht gemaakt voor het <a href="http://hvc.nl">Herbert Vissers College.</a> Dit project wordt ook getest op 1 vwo leerlingen van deze school.</p>
+				</article>
+			</div>
+			<section>
+				<header class="major">
+					<h2>Contact opnemen</h2>
+				</header>
+				<p>Heb je een probleem of een vraag? Of wil je gewoon even wat feedback geven over de lessen en de website, dan kan dat met de onderstaande methoden.</p>
+				<ul class="contact">
+					<li class="fa-envelope-o"><a href="mailto:CSMDevs@gmail.com">CSMDevs@gmail.com</a></li>
+					<li class="fa-twitter"><a href="//twitter.com/csm_devs" target="_blank">@CSM_Devs</a></li>
+					<li class="fa-instagram"><a href="//instagram.com/csm_devs" target="_blank">@CSM_Devs</a></li>
+					<li class="fa-code"><a href="//csmdevs.github.io" target="_blank">CSMdevs.github.io</a></li>
+				</ul>
+			</section>
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">&copy; <a href="https://michadenheijer.com" target="_blank">Micha den Heijer</a>, <a href="http://cemresuler.nl" target='_blank'>Cemre Süler</a>, <a href="https://instagram.com/stanverlaan/" target="_blank">Stan Verlaan</a> & <a href="https://instagram.com/patrick_13db"
+					 target="_blank">Patrick de Bruijn</a>. All rights reserved. Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+			</footer>
+
+		</div>
+	</div>
+
+	</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/quiz.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/scrolling.js"></script>
+
+</body>
+<style>
+	/*body {
+			font-size: 20px;
+			font-family: 'Work Sans', sans-serif;
+			color: #333;
+			font-weight: 300;
+			
+			background-color: #f8f6f0;
+		}*/
+
+	h1 {
+		font-weight: 300;
+		margin: 0px;
+		padding: 10px;
+		font-size: 20px;
+		background-color: #444;
+		color: #fff;
+	}
+
+	.question {
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
+
+	.answers {
+		margin-bottom: 20px;
+		text-align: left;
+		display: inline-block;
+	}
+
+	/*
+		.answers label {
+			display: block;
+			margin-bottom: 10px;
+		}*/
+
+	button {
+		font-family: 'Work Sans', sans-serif;
+		font-size: 22px;
+		background-color: #279;
+		color: #fff;
+		border: 0px;
+		border-radius: 3px;
+		padding: 20px;
+		cursor: pointer;
+		margin-bottom: 20px;
+	}
+
+	button:hover {
+		background-color: #38a;
+	}
+
+	.slide {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+
+	.active-slide {
+		opacity: 1;
+		z-index: 2;
+	}
+
+	.quiz-container {
+		position: relative;
+		height: 200px;
+		margin-top: 40px;
+	}
+
+	#quiz-thing-name {
+		text-align: center;
+	}
+</style>
+
+</html>
