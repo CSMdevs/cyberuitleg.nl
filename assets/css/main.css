@@ -4011,24 +4011,21 @@
  
 /* Profile pic */
 
-.profilepic-image {
+.profile-image {
 	width: 3em;
 	height: 3em;
 	border-radius: 50%;
 	position: relative;
 	vertical-align: middle;
 }
-
 .profile-all {
 	display: inline-block;
 }
-.profile-title {
-	
-} 
 .profile-text {
 	margin-left: 0.3em;
 }
 
+/* Iets waar iemand geen comment aan heeft gegeven */
 input[type="checkbox"],
 	input[type="radio"] {
 		-moz-appearance: none;
