@@ -149,3 +149,7 @@ function submitQuiz() {
     $(this).addClass("hide");
   });
 }); */
+var submitButton = document.getElementById("submitButton");
+submitButton.onclick = function () {
+  show_alert();
+}
