@@ -144,8 +144,8 @@ function submitQuiz() {
 
 }
 
-$(document).ready(function() {
+/*$(document).ready(function() {
   $("#submitButton").click(function() {
     $(this).addClass("hide");
   });
-});
+}); */
