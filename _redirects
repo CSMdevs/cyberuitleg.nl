@@ -19,7 +19,8 @@
 /images/hvc.jpg /images/menu/hvc.jpg
 
 # typo in menu
-/poorten-quiz /poorten-toets
+/poorten-quiz.html /poorten-quiz 302
+/poorten-quiz /poorten-toets 302
 
 # renames
 /images/server.jpg /images/poorten-introductie-top.jpg 302
