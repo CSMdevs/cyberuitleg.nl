@@ -1,2 +1,22 @@
+# redirect to new quiz
 /assets/js/quiz.js /assets/js/quizv2.js 303
-/video/demo/video_demo.mp4 /video/demo.mp4
+
+# demo video new place
+/video/demo/video_demo.mp4 /video/demo.mp4 302
+
+#icons to icons folder
+/images/cancel.svg /images/icons/cancel.svg 302
+/images/favicon.ico /images/icons/favicon.ico 302
+/images/favicon.png /images/icons/favicon.png 302
+
+# profile pics new folder
+/images/profile-pic-cemre.jpg /images/profile-pics/cemre.jpg 302
+/images/profile-pic-patrick.jpg /images/profile-pics/patrick.jpg 302
+/images/profile-pic-stan.jpg /images/profile-pics/stan.jpg 302
+/images/profile-pic-micha.jpg /images/profile-pics/micha.jpg 302
+
+# everything in the menu in new folder
+/images/hvc.jpg /images/menu/hvc.jpg
+
+# renames
+/images/server.jpg /images/poorten-introductie-top.jpg 302
