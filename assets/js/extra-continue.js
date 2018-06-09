@@ -1,5 +1,5 @@
 var meerVertellen = document.getElementById("meer-vertellen-gwn");
-var meerVertellenButton = document.getElementById("antwoord-meer-verder");
+var meerVertellenButton = document.getElementById("antwoord-weer-verder");
 
 meerVertellen.style.display = 'none';
 
