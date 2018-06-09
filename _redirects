@@ -18,5 +18,8 @@
 # everything in the menu in new folder
 /images/hvc.jpg /images/menu/hvc.jpg
 
+# typo in menu
+/poorten-quiz /poorten-toets
+
 # renames
 /images/server.jpg /images/poorten-introductie-top.jpg 302
