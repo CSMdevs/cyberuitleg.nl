@@ -74,3 +74,7 @@ if (isFinished == 'true') {
 function hideBanner() {
     $(alreadyFinished).hide("slow");
 }
+
+alreadyFinished.onclick = function () {
+    hideBanner();
+}
