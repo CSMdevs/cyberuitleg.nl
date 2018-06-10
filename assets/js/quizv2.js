@@ -47,11 +47,11 @@ function submitQuiz() {
   function correctAnswer(correctStringNo, qNumber) {
     console.log("qNumber: " + qNumber); // logs 1,2,3,4 after called below
     return (
-      "Je antwoord was fout. <br> Het goede antwoord van vraag #" +
+      "<i>Je antwoord was fout. <br> Het goede antwoord van vraag #" +
       qNumber +
       " was: &nbsp;<strong> " +
       document.getElementById(correctStringNo).innerHTML +
-      "</strong>"
+      "</strong></i>"
     );
   }
 
@@ -129,16 +129,16 @@ function submitQuiz() {
   var showScore = "Uitslag: " + calcScore + " van de " + questionCounter + " vragen goed.";
   // if 4/4, "perfect score!"
   if (calcScore === questionCounter) {
-    showScore = showScore + "&nbsp;<br> <strong>Je hebt alles goed, je bent duidelijk een expert!</strong>";
+    showScore = showScore + "&nbsp;<br><strong>Je hebt alles goed, je bent duidelijk een 'expert'!</strong>";
   }
   if (calcScore <= 3) {
-    showScore = showScore + "&nbsp; <br><strong>Je hebt bijna alles fout, we raden je aan om nog even de lessen te bekijken.</strong>";
+    showScore = showScore + "&nbsp; <br><strong>Bijna alles fout...... Wat heb je dan hier gedaan? Bekijk alles maar nog een keer.</strong>";
   }
   if (calcScore > 3 && calcScore <= 6) {
-    showScore = showScore + "&nbsp; <br><strong>Je hebt redelijk wat fouten gemaakt, je kan nog even de lessen doorkijken. </strong>";
+    showScore = showScore + "&nbsp; <br><strong>Oké het is niet slecht, maar ja je zit op het vwo, dus je kan wel beter.</strong>";
   }
    if (calcScore > 6 && calcScore < questionCounter) {
-    showScore = showScore + "&nbsp; <br><strong>Je hebt de toets voldoende gemaakt!</strong>";
+    showScore = showScore + "&nbsp; <br><strong>Lekker! Een zes of hoger!</strong>";
   }
   document.getElementById("userScore").innerHTML = showScore;
 
@@ -152,4 +152,7 @@ function submitQuiz() {
 var submitButton = document.getElementById("submitButton");
 submitButton.onclick = function () {
   show_alert();
+   $('html, body').animate({
+        scrollTop: $("#userScore").offset().top
+    }, 2000);
 }

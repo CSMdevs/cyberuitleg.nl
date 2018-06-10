@@ -6,6 +6,7 @@ var eindeLes = document.getElementById('einde-les');
 var alreadyFinished = document.getElementById('already-finished');
 var verderAfterVideo = document.getElementById('verder-after-video');
 var antwoordInvulPlek = document.getElementById('antwoord-invul-plek');
+var pagina = window.location.pathname;
 var ingevuldAntwoord;
 
 
@@ -20,7 +21,7 @@ antwoordVerder.onclick = function() {
     $('html, body').animate({
         scrollTop: $("#einde-les").offset().top
     }, 2000);
-    document.cookie = "finished=true; expires=Thu, 01 Jan 2019 12:00:00 UTC";
+    document.cookie = "finished=true; expires=Thu, 01 Jan 2019 12:00:00 UTC; path=" + pagina;
     $("#your-answer-verder-button").hide(1000);
     return;
 };
@@ -47,26 +48,6 @@ verderAfterVideo.onclick = function() {
 function setInput(input){
     yourAnswer.innerHTML = input;
 }
-
-/*function required() {
-    var empt = document.forms["the-answer"]["antwoord-invul"].value;
-    if (empt == "") {
-        cannotContinue.style.display = 'inline';
-        $('html, body').animate({
-            scrollTop: $("#cannot-click").offset().top
-        }, 2000);
-        return false;
-    }
-    else {
-        answer.style.display = 'inline';
-        cannotContinue.style.display = 'none';
-        yourAnswer.innerHTML = empt;
-        $('html, body').animate({
-            scrollTop: $("#second").offset().top
-        }, 2000);
-        return false;
-    }
-}*/
 
 function getCookie(cname) {
     var name = cname + "=";
