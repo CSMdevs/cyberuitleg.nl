@@ -1,3 +1,4 @@
+document.getElementById("boxScore").style.visibility = "hidden"; 
 function show_alert() {
   if(confirm("Weet je zeker dat je de toets wilt insturen?\n\
 Hierna kan je je antwoorden niet meer aanpassen."))
@@ -7,15 +8,15 @@ Hierna kan je je antwoorden niet meer aanpassen."))
 }
 function submitQuiz() {
 
-    
-  
+  /* document.getElementById("boxScore").style.visibility = "visible"; */
   
   console.log("submitted");
 
   // get each answer score
   function answerScore(qName) {
     var radiosNo = document.getElementsByName(qName);
-
+    document.getElementById("boxScore").style.visibility = "visible";
+    
     for (var i = 0, length = radiosNo.length; i < length; i++) {
       if (radiosNo[i].checked) {
         // do something with radiosNo
@@ -137,11 +138,10 @@ function submitQuiz() {
   if (calcScore > 3 && calcScore <= 6) {
     showScore = showScore + "&nbsp; <br><strong>Oké het is niet slecht, maar ja je zit op het vwo, dus je kan wel beter.</strong>";
   }
-   if (calcScore > 6 && calcScore < questionCounter) {
+  if (calcScore > 6 && calcScore < questionCounter) {
     showScore = showScore + "&nbsp; <br><strong>Lekker! Een zes of hoger!</strong>";
   }
   document.getElementById("userScore").innerHTML = showScore;
-
 }
 
 /*$(document).ready(function() {
