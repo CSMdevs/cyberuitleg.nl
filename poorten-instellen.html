@@ -19,6 +19,7 @@
 </head>
 
 <body>
+	<script>document.body.className += ' fade-out';</script>
 	<noscript>
 			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2MJLPK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		</noscript>
@@ -197,7 +198,11 @@ En dan moet je dit vertalen ofzo.</code></pre>
 	<script src="assets/js/scrolling.js"></script>
 	<script src="assets/js/video.js"></script>
 	<script src="assets/js/continue.js"></script>
-
+	<script>
+			$(function() {
+				$('body').removeClass('fade-out');
+			});
+		</script>
 </body>
 
 </html>

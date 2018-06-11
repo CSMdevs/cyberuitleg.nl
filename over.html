@@ -17,6 +17,7 @@
 </head>
 
 <body>
+	<script>document.body.className += ' fade-out';</script>
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2MJLPK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
@@ -146,7 +147,7 @@
 						<li><a href="https://twitter.com/patrickdebruij6" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
 						<li><a href="https://www.facebook.com/patrick.debruijn.754" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
 						<li><a href="https://www.instagram.com/patrick_13db" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-						<li><a href="/patrick/" class="icon fa-code" target="_blank"><span class="label">Mijn Website</span></a></li>
+						<li><a href="../patrick/index.html" class="icon fa-code" target="_blank"><span class="label">Mijn Website</span></a></li>
 					</ul>
 					</div>
 					
@@ -267,7 +268,11 @@
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/scrolling.js"></script>
-
+	<script>
+			$(function() {
+				$('body').removeClass('fade-out');
+			});
+		</script>
 </body>
 
 </html>
