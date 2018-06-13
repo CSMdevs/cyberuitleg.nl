@@ -68,6 +68,9 @@ video.onended = function() {
 verderCorrect.onclick = function() {
     $(question).hide("slow");
     $(video).show("slow");
+    $('html, body').animate({
+            scrollTop: $(video).offset().top
+        }, 2000);
     video.play();
     return;
 };
@@ -75,6 +78,9 @@ verderCorrect.onclick = function() {
 verderWrong.onclick = function() {
     $(question).hide("slow");
     $(video).show("slow");
+    $('html, body').animate({
+            scrollTop: $(video).offset().top
+        }, 2000);
     video.play();
 };
 
@@ -87,6 +93,9 @@ var pausing_function = function() {
         video.webkitExitFullScreen();
         $(question).show("slow");
         $(video).hide("slow");
+        $('html, body').animate({
+            scrollTop: $(question).offset().top
+        }, 2000);
 
 
     }
