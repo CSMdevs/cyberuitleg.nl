@@ -82,37 +82,37 @@ function submitQuiz() {
   }
   if (answerScore("q5") === 0) {
     document.getElementById("correctAnswer5").innerHTML = correctAnswer(
-      "correctString4",
+      "correctString5",
       5
     );
   }
   if (answerScore("q6") === 0) {
     document.getElementById("correctAnswer6").innerHTML = correctAnswer(
-      "correctString4",
+      "correctString6",
       6
     );
   }
   if (answerScore("q7") === 0) {
     document.getElementById("correctAnswer7").innerHTML = correctAnswer(
-      "correctString4",
+      "correctString7",
       7
     );
   }
   if (answerScore("q8") === 0) {
     document.getElementById("correctAnswer8").innerHTML = correctAnswer(
-      "correctString4",
+      "correctString8",
       8
     );
   }
   if (answerScore("q9") === 0) {
     document.getElementById("correctAnswer9").innerHTML = correctAnswer(
-      "correctString4",
+      "correctString9",
       9
     );
   }
   if (answerScore("q10") === 0) {
     document.getElementById("correctAnswer10").innerHTML = correctAnswer(
-      "correctString4",
+      "correctString10",
       10
     );
   }
@@ -142,11 +142,11 @@ function submitQuiz() {
   document.getElementById("userScore").innerHTML = showScore;
 }
 
-/*$(document).ready(function() {
+$(document).ready(function() {
   $("#submitButton").click(function() {
     $(this).addClass("hide");
   });
-}); */
+}); 
 var submitButton = document.getElementById("submitButton");
 submitButton.onclick = function () {
   show_alert();
