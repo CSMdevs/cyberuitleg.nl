@@ -8,7 +8,7 @@ Hierna kan je je antwoorden niet meer aanpassen."))
 }
 function submitQuiz() {
 
-  /* document.getElementById("boxScore").style.visibility = "visible"; */
+  document.getElementById("boxScore").style.visibility = "visible";
   
   console.log("submitted");
 
