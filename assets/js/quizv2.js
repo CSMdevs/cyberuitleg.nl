@@ -124,7 +124,7 @@ function submitQuiz() {
   for (var i = 0, length = questionCountArray.length; i < length; i++) {
     questionCounter++;
   }
-  document.getElementById("boxScore").style.display = "block";
+  document.getElementById("boxScore").style.display = "inline";
   // show score as "score/possible score"
   var showScore = "Uitslag: " + calcScore + " van de " + questionCounter + " vragen goed.";
   // if 4/4, "perfect score!"
