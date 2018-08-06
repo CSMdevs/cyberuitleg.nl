@@ -1,7 +1,7 @@
 /*
   X-Frame-Options: SAMEORIGIN
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src 'unsave-inline' https:
+  Content-Security-Policy: default-src https:; script-src 'unsave-inline'; style-src 'unsave-inline'
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
   X-Made-By: Micha den Heijer
