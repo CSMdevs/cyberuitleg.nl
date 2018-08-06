@@ -1,7 +1,7 @@
 /*
   X-Frame-Options: SAMEORIGIN
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src https:; script-src 'unsave-inline' https:; style-src 'unsave-inline' https:
+  Content-Security-Policy: default-src https: mapbox:; script-src 'unsave-inline' https: mapbox:; style-src 'unsave-inline' https: mapbox:
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
   X-Made-By: Micha den Heijer
