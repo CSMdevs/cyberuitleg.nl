@@ -1,5 +1,6 @@
 # redirect to new quiz
 /assets/js/quiz.js /assets/js/quizv2.js 303
+/micha/ https://michadenheijer.com/nl/ 301
 
 # demo video new place
 /video/demo/video_demo.mp4 /video/demo.mp4 301

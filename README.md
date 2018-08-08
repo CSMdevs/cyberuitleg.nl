@@ -1,4 +1,12 @@
 # CyberUitleg
+This site is create by the CSM-Devs team in collaboration with help of a 
+outside collaborater (Patrick de Bruijn).
+
+The main purpose of this site is to learn childeren in the age of 12-14 about
+cybersecurity. We have tried to achieve our goal by making it as immersive as
+possible. Hopefully we have succeed.
+
+Contact us for more details | CSMDevs@gmail.com
 
 # Theme README
 Editorial by HTML5 UP
