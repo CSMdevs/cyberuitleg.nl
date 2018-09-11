@@ -71,22 +71,28 @@
                         <div>
                             <div>
                                 <p class="question"><strong>1.</strong> Typ het getal 4 in binair.</p>
-                                <input type="text" id="vraag1" onChange="demoFunction()">
+                                <input type="text" name="demo-name" id="vraag1" value="" placeholder="Typ antwoord hier" onChange="demoFunction()">
                                 <p id="demo"></p>
                             </div>
                             <div>
-                                <p class="question"><strong>2.</strong> Typ het getal 4 in binair.</p>
-                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Typ antwoord hier" />
+                                <p class="question"><strong>2.</strong> Noem de 2 manieren waarop je het getal ... in binair kan schrijven.</p>
+                                <input type="text" name="demo-name" id="vraag2" value="" placeholder="Typ antwoord hier"/>
                             </div>
                             <div>
                                 <p class="question"><strong>3.</strong> Typ het getal 4 in binair.</p>
-                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Typ antwoord hier" />
+                                <input type="text" name="demo-name" id="vraag3" value="" placeholder="Typ antwoord hier" />
                             </div>
                             <div>
                                 <p class="question"><strong>4.</strong> Typ het getal 4 in binair.</p>
-                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Typ antwoord hier" />
+                                <input type="text" name="demo-name" id="vraag4" value="" placeholder="Typ antwoord hier" />
                             </div>
                         </div>
+                        
+                    <!-- Binary calculators -->
+                    <ul>
+                        <li><input type="number" name="demo-name" id="dec2bin" value="" placeholder="Vul uw decimale waarde in" onChange="dec2bin()"/></li>
+                        <li><p id="binair"></p></li>
+                    </ul>
                     <h2 id="hex">Hex codes</h2>
                         <div id="video">
                             <video id="intro-video" poster="images/server.jpg" controls style="margin-left: auto; margin-right: auto; display:block; max-width:80%; max-heigt: 500px;" data-pause1="26" data-ans1="USB" data-ans2="TCP" data-ans3="Ethernet" data-ans4="Koptelefoon" data-ansc="two">
@@ -220,6 +226,7 @@ UDP is sneller.</code></pre>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/miniserie-quiz.js"></script>
+    <script src="assets/js/dec2bin.js"></script>
     <!--[if lte IE 8]><script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/scrolling.js"></script>
