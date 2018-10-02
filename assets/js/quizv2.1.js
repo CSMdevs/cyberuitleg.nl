@@ -1,31 +1,26 @@
 /* global $*/
-document.getElementById("boxScore").style.display = "none"; 
-function show_alert() {
-  if(confirm("Weet je zeker dat je de toets wilt insturen?\n\
-Hierna kan je je antwoorden niet meer aanpassen."))
-    submitQuiz();
-  else
-    return false;
-}
-function submitQuiz() {
+document.getElementById("boxScore").style.display = "none";
 
+function show_alert() {
+  submitQuiz();
+}
+
+function submitQuiz() {
   document.getElementById("boxScore").style.visibility = "visible";
-  
   console.log("submitted");
 
   // get each answer score
   function answerScore(qName) {
     var radiosNo = document.getElementsByName(qName);
-    
     for (var i = 0, length = radiosNo.length; i < length; i++) {
-      if (radiosNo[i].checked) {
-        // do something with radiosNo
+      if (radiosNo[i].checked) { 
         var answerValue = Number(radiosNo[i].value);
       }
     }
     // change NaNs to zero
     if (isNaN(answerValue)) {
       answerValue = 0;
+      console.log("de fout is hier");
     }
     return answerValue;
   }
@@ -56,13 +51,13 @@ function submitQuiz() {
     );
   }
 
-  for (i = 1; i < 10; i++) {
-    if (answerScore("q" + i.toString()) === 0){
-        if (answerScore("q"+i.toString()) === 0) {
-          document.getElementById("correctAnswer"+ i.toString()).innerHTML = correctAnswer("correctString"+ i.toString(), i);
-        }
-      }  
+  for (var i = 1; i < 10; i++) {
+    if (answerScore("q" + i.toString()) === 0) {
+      if (answerScore("q" + i.toString()) === 0) {
+        document.getElementById("correctAnswer" + i.toString()).innerHTML = correctAnswer("correctString" + i.toString(), i);
+      }
     }
+  }
 
   // calculate "possible score" integer
   var questionCountArray = document.getElementsByClassName("question");
@@ -77,13 +72,17 @@ function submitQuiz() {
   // if 4/4, "perfect score!"
   if (calcScore == questionCounter) {
     showScore = showScore + "&nbsp;<br><strong>Je hebt alles goed, je bent duidelijk een 'expert'!</strong>";
-  } else if (calcScore == 0) {
+  }
+  else if (calcScore == 0) {
     showScore = showScore + "&nbsp; <br><strong>Alles fout...... Ga jij maar even een briefje halen bij B007! Jij hebt namelijk niks gedaan</strong>";
-  } else if (calcScore <= 3) {
+  }
+  else if (calcScore <= 3) {
     showScore = showScore + "&nbsp; <br><strong>Bijna alles fout...... Wat heb je dan hier gedaan? Bekijk alles maar nog een keer.</strong>";
-  } else if (calcScore > 3 && calcScore <= 6) {
+  }
+  else if (calcScore > 3 && calcScore <= 6) {
     showScore = showScore + "&nbsp; <br><strong>Oké het is niet slecht, maar ja je zit op het vwo, dus je kan wel beter.</strong>";
-  } else if (calcScore > 6 && calcScore < questionCounter) {
+  }
+  else if (calcScore > 6 && calcScore < questionCounter) {
     showScore = showScore + "&nbsp; <br><strong>Lekker! Een zes of hoger!</strong>";
   }
   document.getElementById("userScore").innerHTML = showScore;
@@ -93,11 +92,11 @@ $(document).ready(function() {
   $("#submitButton").click(function() {
     $(this).addClass("hide");
   });
-}); 
+});
 var submitButton = document.getElementById("submitButton");
-submitButton.onclick = function () {
+submitButton.onclick = function() {
   show_alert();
-   $('html, body').animate({
-        scrollTop: $("#userScore").offset().top
-    }, 2000);
+  $('html, body').animate({
+    scrollTop: $("#userScore").offset().top
+  }, 2000);
 };

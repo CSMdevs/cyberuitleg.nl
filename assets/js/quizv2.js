@@ -1,11 +1,7 @@
 /* global $*/
 document.getElementById("boxScore").style.display = "none"; 
 function show_alert() {
-  if(confirm("Weet je zeker dat je de toets wilt insturen?\n\
-Hierna kan je je antwoorden niet meer aanpassen."))
     submitQuiz();
-  else
-    return false;
 }
 function submitQuiz() {
 
