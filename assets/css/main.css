@@ -3115,7 +3115,7 @@ input[type="button"],
 button,
 .cookiebanner-close,
 .button {
-	-moz-appearance: none ;
+	-moz-appearance: none;
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
