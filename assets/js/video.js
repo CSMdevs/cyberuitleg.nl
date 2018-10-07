@@ -132,3 +132,9 @@ function ansIsWrong() {
 
 //The stuff that's needed, but not intresting
 video.addEventListener("timeupdate", pausing_function);
+
+//For when delay is needed
+function sleep(delay) {
+        var start = new Date().getTime();
+        while (new Date().getTime() < start + delay);
+      }
