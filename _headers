@@ -4,5 +4,8 @@
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
   X-Made-By: Micha den Heijer
-  Connection: keep-alive 
-  
+  Connection: keep-alive
+ /*.html
+  cache-control: max-age=3600
+ /assets/*
+  cache-control: max-age=2592000
