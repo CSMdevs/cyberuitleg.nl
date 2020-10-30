@@ -1,5 +1,5 @@
 # link to new website
-https://cyberuitleg.nl/* https://prgrmmr.nl/ 301!
+https://www.cyberuitleg.nl/* https://prgrmmr.nl/ 301!
 
 # redirect to new quiz
 /assets/js/quiz.js /assets/js/quizv2.js 302
