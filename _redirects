@@ -1,3 +1,6 @@
+# link to new website
+/* https://prgrmmr.nl/ 301
+
 # redirect to new quiz
 /assets/js/quiz.js /assets/js/quizv2.js 302
 /micha/ https://michadenheijer.com/nl/ 301
@@ -25,6 +28,3 @@
 # renames
 /images/server.jpg /images/poorten-introductie-top.jpg 301
 https://cyberuitleg.netlify.com/* https://www.cyberuitleg.nl/:splat 301!
-
-# link to new website
-/* https://prgrmmr.nl/ 301
